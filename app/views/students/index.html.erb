@@ -18,11 +18,8 @@
   <tbody>
     <% @students.each do |student| %>
       <%= render student %>
-      <p>
-        <%= link_to "Show this student", student %>
-      </p>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "New student", new_student_path %>
+<%= link_to "New student", new_student_path, class: 'btn btn-success' %>

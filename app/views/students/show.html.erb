@@ -1,10 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @student %>
+<article class="blog-post">
 
-<div>
-  <%= link_to "Edit this student", edit_student_path(@student) %> |
-  <%= link_to "Back to students", students_path %>
+<h2 class="display-5 link-body-emphasis mb-4"> <%= @student.name %></h2>
+<p class="blog-post-meta">Email: <%= (@student.email) %></p>
+<p class="blog-post-meta">Phone: <%= (@student.phone) %></p>
+<p class="blog-post-meta">Adrress: <%= (@student.address) %></p>
+<p class="blog-post-meta">Date of Birth: <%= (@student.date_of_birth) %></p>
+<p class="blog-post-meta">Registration Number: <%= (@student.registration_number) %></p>
+<p class="blog-post-meta">Course: <%= (@student.course.course_name) %></p>
 
-  <%= button_to "Destroy this student", @student, method: :delete %>
-</div>
+<%= link_to 'Back', students_path, class: 'btn btn-primary' %>
+<%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-success' %>
+
+</article>
+

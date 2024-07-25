@@ -1,37 +1,29 @@
 <div id="<%= dom_id student %>">
-  <p>
-    <strong>Name:</strong>
-    <%= student.name %>
-  </p>
+  <tr>
+    <td> <%= student.name %> </td>
+    
+    <td> <%= student.date_of_birth %> </td>
 
-  <p>
-    <strong>Date of birth:</strong>
-    <%= student.date_of_birth %>
-  </p>
+    <td> <%= student.address %> </td>
 
-  <p>
-    <strong>Address:</strong>
-    <%= student.address %>
-  </p>
+    <td> <%= student.phone%> </td>
 
-  <p>
-    <strong>Phone:</strong>
-    <%= student.phone %>
-  </p>
+    <td> <%= student.email%> </td>
 
-  <p>
-    <strong>Email:</strong>
-    <%= student.email %>
-  </p>
+    <td> <%= student.registration_number%> </td>
 
-  <p>
-    <strong>Registration number:</strong>
-    <%= student.registration_number %>
-  </p>
+    <td> <%= student.course_id%> </td>
 
-  <p>
-    <strong>Course:</strong>
-    <%= student.course_id %>
-  </p>
+    <td> 
+      <%= link_to student_path(student) do %>
+        <i class="fas fa-eye"></i>
+      <%end%>
+    </td>
 
+    <td> 
+    <%= link_to edit_student_path(student) do %>
+      <i class="fas fa-edit"></i>
+    <%end%>
+    </td>
+  </tr>
 </div>

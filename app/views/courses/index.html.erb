@@ -2,13 +2,20 @@
 
 <h1>Courses</h1>
 
-<div id="courses">
-  <% @courses.each do |course| %>
-    <%= render course %>
-    <p>
-      <%= link_to "Show this course", course %>
-    </p>
-  <% end %>
-</div>
+<table class="table table-hover" >
+  <thead>
+    <tr>      
+      <th><strong>Course Name</strong></th>
+      <th><strong>Course Code</strong></th>
+      <th colspan="3" ><strong>Actions</strong></th>
+    </tr>
+  </thead>
 
-<%= link_to "New course", new_course_path %>
+  <tbody>
+    <% @courses.each do |course| %>
+      <%= render course %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Course", new_course_path, class: 'btn btn-success' %>
