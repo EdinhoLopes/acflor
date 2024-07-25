@@ -1,0 +1,47 @@
+<%= simple_form_for student do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.input :name %>
+  </p>
+
+  <p>
+    <%= form.input :date_of_birth%>
+  </p>
+
+  <p>
+    <%= form.input :address %>
+
+  </p>
+
+  <p>
+    <%= form.input :phone %>
+  </p>
+
+  <p>
+    <%= form.input :email %>
+  </p>
+
+  <p>
+    <%= form.input :registration_number %>
+  </p>
+
+  <p>
+
+    <%= form.input :course_id, collection: @courses, label_method: :course_name, value_method: :id, prompt: 'Selecione um curso' %>
+  </p>
+
+  <p>
+    <%= form.button :submit, class: 'btn btn-success' %>
+  </p>
+<% end %>
