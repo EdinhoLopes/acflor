@@ -16,7 +16,7 @@
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #e74a3b;
-  --orange: #fd7e14;
+  --orange: #f8c59bfb;
   --yellow: #f6c23e;
   --green: #1cc88a;
   --teal: #20c9a6;
@@ -31,7 +31,7 @@
   --warning: #f6c23e;
   --danger: #e74a3b;
   --light: #f8f9fc;
-  --dark: #5a5c69;
+  --dark: #7b8788;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -4031,7 +4031,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link.disabled {
-  color: #858796;
+  color: #968a85;
   pointer-events: none;
   cursor: default;
 }
@@ -4059,8 +4059,8 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #6e707e;
-  background-color: #fff;
+  color: #707e6e;
+  background-color: #ffffff;
   border-color: #dddfeb #dddfeb #fff;
 }
 
@@ -4077,7 +4077,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #4e73df;
+  background-color: #13d123;
 }
 
 .nav-fill > .nav-link,
@@ -6492,6 +6492,10 @@ button.bg-dark:focus {
 
 .bg-white {
   background-color: #fff !important;
+}
+
+.bg-orange {
+  background-color: #ec7f00 !important;
 }
 
 .bg-transparent {
@@ -9911,6 +9915,11 @@ a:focus {
   background-size: cover;
 }
 
+.bg-gradient-tertiary {
+  background-color: #167347;
+  background-image: linear-gradient(180deg, #006b2b 10%, #006b2c 100%);
+}
+
 .bg-gradient-success {
   background-color: #1cc88a;
   background-image: linear-gradient(180deg, #1cc88a 10%, #13855c 100%);
@@ -11278,4 +11287,12 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
+}
+
+.box-shadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; 
+  padding: 10px; 
+  background-color: #5a5c69; 
+  border: 3px solid #ddd; 
 }

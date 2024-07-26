@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_24_134157) do
     t.string "course_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_code"], name: "index_courses_on_course_code", unique: true
   end
 
   create_table "entities", force: :cascade do |t|
@@ -61,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_24_134157) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_students_on_course_id"
+    t.index ["registration_number"], name: "index_students_on_registration_number", unique: true
   end
 
   add_foreign_key "attendances", "courses"
