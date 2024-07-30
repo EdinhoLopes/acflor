@@ -13,6 +13,7 @@
             <th>Adrress</th>
             <th>Date of Birth</th>
             <th>Course</th>
+            <th>Entity</th>
             </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
                 <td><%= @student.address %></td>
                 <td><%= @student.date_of_birth %></td>
                 <td><%= @student.course.course_name %></td>
+                <td> <%= @student.entity.name%> </td>
             </tr>
         </tbody>
         </table>
