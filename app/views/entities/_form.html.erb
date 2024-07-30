@@ -1,0 +1,40 @@
+
+<%= simple_form_for entity do |form| %>
+
+  <% if entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.input :name %>
+  </p>
+
+  <p>
+    <%= form.input :responsible%>
+  </p>
+
+  <p>
+    <%= form.input :address %>
+  </p>
+
+  <p>
+    <%= form.input :phone %>
+  </p>
+
+  <p>
+    <%= form.input :email %>
+  </p>
+
+  <p>
+    <%= form.button :submit, class: 'btn btn-success' %>
+    <%= link_to "Back", entities_path, class: 'btn btn-primary' %>
+  </p>
+<% end %>

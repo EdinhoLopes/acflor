@@ -1,0 +1,82 @@
+<%= simple_form_for student do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.input :name %>
+  </p>
+
+  <p>
+    <%= form.input :date_of_birth, as: :date%>
+  </p>
+
+  <p>
+    <%= form.input :address %>
+
+  </p>
+
+  <p>
+    <%= form.input :phone %>
+  </p>
+
+  <p>
+    <%= form.input :email %>
+  </p>
+
+
+  <p>
+    <%= form.input :entity_id, collection: @entities, label_method: :name, value_method: :id, prompt: 'Choose of entity', input_html: { id: 'entity_select' } %>
+  </p>
+
+  <p>
+    <%= form.input :course_id, collection: @courses, label_method: :course_name, value_method: :id, prompt: 'Choose of course', input_html: { id: 'course_select' }%>
+  </p>
+
+  <p>
+    <%= form.button :submit, class: 'btn btn-success' %>
+    <%= link_to "Back", students_path, class: 'btn btn-primary' %>
+  </p>
+<% end %>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const entitySelect = document.getElementById("entity_select");
+    const courseSelect = document.getElementById("course_select");
+
+    entitySelect.addEventListener("change", function() {
+      const entityId = this.value;
+
+      fetch(`/courses.json?entity_id=${entityId}`)
+        .then(response => response.json())
+        .then(data => {
+          // Clear current options
+          while (courseSelect.options.length > 0) {
+            courseSelect.remove(0);
+          }
+
+          // Add prompt option
+          const promptOption = document.createElement("option");
+          promptOption.text = "Selecione um curso";
+          promptOption.value = "";
+          courseSelect.add(promptOption);
+
+          // Add new options
+          data.forEach(course => {
+            const option = document.createElement("option");
+            option.text = course.course_name;
+            option.value = course.id;
+            courseSelect.add(option);
+          });
+        });
+    });
+  });
+</script>
