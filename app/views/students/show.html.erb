@@ -1,17 +1,36 @@
 <p style="color: green"><%= notice %></p>
 
-<article class="blog-post">
+<h1>Student</h1>
 
-<h2 class="display-5 link-body-emphasis mb-4"> <%= @student.name %></h2>
-<p class="blog-post-meta">Email: <%= (@student.email) %></p>
-<p class="blog-post-meta">Phone: <%= (@student.phone) %></p>
-<p class="blog-post-meta">Adrress: <%= (@student.address) %></p>
-<p class="blog-post-meta">Date of Birth: <%= (@student.date_of_birth) %></p>
-<p class="blog-post-meta">Registration Number: <%= (@student.registration_number) %></p>
-<p class="blog-post-meta">Course: <%= (@student.course.course_name) %></p>
-
-<%= link_to 'Back', students_path, class: 'btn btn-primary' %>
-<%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-success' %>
-
-</article>
-
+<div class="card card-default">
+    <div class="card-header">
+        <table class="table">
+        <thead>
+            <tr>
+            <th>Name protocolo</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Adrress</th>
+            <th>Date of Birth</th>
+            <th>Registration Number</th>
+            <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= @student.name%></td>
+                <td><%= @student.email %></td>
+                <td><%= @student.phone %></td>
+                <td><%= @student.address %></td>
+                <td><%= @student.date_of_birth %></td>
+                <td><%= @student.registration_number %></td>
+                <td><%= @student.course.course_name %></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        <%= link_to 'Back', students_path, class: 'btn btn-primary' %>
+        <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-success' %>
+    </div>
+</div>

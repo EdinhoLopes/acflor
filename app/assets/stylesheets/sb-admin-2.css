@@ -11296,3 +11296,74 @@ body.sidebar-toggled footer.sticky-footer {
   background-color: #5a5c69; 
   border: 3px solid #ddd; 
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px; 
+}
+
+.pagination a, .pagination span {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  background-color: #28a745; 
+  color: #fff; 
+}
+
+.pagination a:hover {
+  background-color: #218838; 
+  color: #fff; 
+}
+
+.pagination .current, .pagination .active a {
+  background-color: #ff9800; 
+  border-color: #ff9800;
+  color: #000; 
+}
+
+.pagination .disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0; 
+}
+
+.header .btn {
+  margin-left: auto; 
+}
+
+.pagination .current, .pagination .current a, .pagination .current span,
+.pagination .active, .pagination .active a, .pagination .active span {
+  background-color: #ff9800 !important; 
+  border-color: #ff9800 !important;
+  color: #fff !important; 
+}
+
+.pagination .page.first, .pagination .page.prev, .pagination .page.next, .pagination .page.last {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}

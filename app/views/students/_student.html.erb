@@ -2,17 +2,15 @@
   <tr>
     <td> <%= student.name %> </td>
     
-    <td> <%= student.date_of_birth %> </td>
-
-    <td> <%= student.address %> </td>
-
-    <td> <%= student.phone%> </td>
+     <td> <%= student.address %> </td>
+     <td> <%= student.phone%> </td>
 
     <td> <%= student.email%> </td>
 
     <td> <%= student.registration_number%> </td>
 
-    <td> <%= student.course_id%> </td>
+    <td> <%= student.course.course_name%> </td>
+    <td> <%= student.date_of_birth %> </td>
 
     <td> 
       <%= link_to student_path(student) do %>

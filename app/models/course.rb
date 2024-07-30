@@ -5,4 +5,5 @@ class Course < ApplicationRecord
   
     validates :course_name, :course_code, presence: true
     validates :course_code, uniqueness: true
+
 end

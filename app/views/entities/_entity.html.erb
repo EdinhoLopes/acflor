@@ -1,27 +1,17 @@
-<div id="<%= dom_id entity %>">
-  <p>
-    <strong>Name:</strong>
-    <%= entity.name %>
-  </p>
-
-  <p>
-    <strong>Responsible:</strong>
-    <%= entity.responsible %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= entity.address %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
-    <%= entity.phone %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= entity.email %>
-  </p>
-
-</div>
+<tr>
+  <td><%= entity.name %></td>
+  <td><%= entity.responsible %></td>
+  <td><%= entity.address %></td>
+  <td><%= entity.phone %></td>
+  <td><%= entity.email %></td>
+  <td>
+    <%= link_to entity_path(entity) do %>
+        <i class="fas fa-eye"></i>
+    <%end%>
+  </td>
+  <td>
+    <%= link_to edit_entity_path(entity) do %>
+      <i class="fas fa-edit"></i>
+    <%end%>
+  </td>
+</tr>

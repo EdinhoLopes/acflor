@@ -1,10 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @course %>
+<h1>Course</h1>
 
-<div>
-  <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %>
-
-  <%= button_to "Destroy this course", @course, method: :delete %>
+<div class="card card-default">
+  <div class="card-header">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Course Code </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+           <td><%= @course.course_name%></td>
+           <td><%= @course.course_code %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">
+      <%= link_to 'Back', courses_path, class: 'btn btn-primary' %>
+      <%= link_to 'Edit', edit_course_path(@course), class: 'btn btn-success' %>
+  </div>
 </div>

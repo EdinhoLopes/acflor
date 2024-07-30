@@ -24,6 +24,11 @@ class StudentsController < ApplicationController
     @courses = Course.all
   end
 
+  def index
+    @students = Student.page(params[:page]).per(10)
+  end
+
+
   # POST /students or /students.json
   def create
     @student = Student.new(student_params)
