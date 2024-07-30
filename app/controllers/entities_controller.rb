@@ -8,6 +8,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities/1 or /entities/1.json
   def show
+    @courses = @entity.courses
   end
 
   # GET /entities/new

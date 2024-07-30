@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: %i[ show edit update destroy ]
   before_action :set_courses, only: %i[new edit create update]
+  before_action :set_entities, only: %i[new edit]
 
   # GET /students or /students.json
   def index
@@ -23,11 +24,6 @@ class StudentsController < ApplicationController
   def set_courses
     @courses = Course.all
   end
-
-  def index
-    @students = Student.page(params[:page]).per(10)
-  end
-
 
   # POST /students or /students.json
   def create
@@ -67,14 +63,24 @@ class StudentsController < ApplicationController
     end
   end
 
+  def index
+    @students = Student.page(params[:page]).per(10)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
       @student = Student.find(params[:id])
     end
 
+
+  def set_entities
+    @entities = Entity.all
+    @courses = Course.none # Inicialmente vazio
+  end
+
     # Only allow a list of trusted parameters through.
     def student_params
-      params.require(:student).permit(:name, :date_of_birth, :address, :phone, :email, :registration_number, :course_id)
+      params.require(:student).permit(:name, :date_of_birth, :address, :phone, :email, :entity_id, :course_id)
     end
 end

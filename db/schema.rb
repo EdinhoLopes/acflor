@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_24_134157) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_30_124420) do
   create_table "attendances", force: :cascade do |t|
     t.integer "student_id", null: false
     t.integer "course_id", null: false
@@ -24,10 +24,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_24_134157) do
 
   create_table "courses", force: :cascade do |t|
     t.string "course_name"
-    t.string "course_code"
+    t.integer "entity_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_code"], name: "index_courses_on_course_code", unique: true
+    t.index ["entity_id"], name: "index_courses_on_entity_id"
   end
 
   create_table "entities", force: :cascade do |t|
@@ -38,17 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_24_134157) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_entities_on_email", unique: true
-  end
-
-  create_table "student_histories", force: :cascade do |t|
-    t.string "student"
-    t.string "references"
-    t.integer "course_id", null: false
-    t.decimal "grade"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_student_histories_on_course_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -57,16 +46,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_24_134157) do
     t.string "address"
     t.string "phone"
     t.string "email"
-    t.string "registration_number"
+    t.integer "entity_id", null: false
     t.integer "course_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_students_on_course_id"
-    t.index ["registration_number"], name: "index_students_on_registration_number", unique: true
+    t.index ["entity_id"], name: "index_students_on_entity_id"
   end
 
   add_foreign_key "attendances", "courses"
   add_foreign_key "attendances", "students"
-  add_foreign_key "student_histories", "courses"
+  add_foreign_key "courses", "entities"
   add_foreign_key "students", "courses"
+  add_foreign_key "students", "entities"
 end

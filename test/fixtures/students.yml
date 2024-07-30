@@ -2,18 +2,18 @@
 
 one:
   name: MyString
-  date_of_birth: 2024-07-24
+  date_of_birth: 2024-07-30
   address: MyString
   phone: MyString
   email: MyString
-  registration_number: MyString
+  entity: one
   course: one
 
 two:
   name: MyString
-  date_of_birth: 2024-07-24
+  date_of_birth: 2024-07-30
   address: MyString
   phone: MyString
   email: MyString
-  registration_number: MyString
+  entity: two
   course: two

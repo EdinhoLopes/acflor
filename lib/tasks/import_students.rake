@@ -19,10 +19,10 @@ namespace :import do
           course: course
         )
 
-      rescue ActiveRecord::RecordNotFound
-        puts "Curso com ID #{row['course_id']} não encontrado. Estudante #{row['name']} não criado."
-      rescue ActiveRecord::RecordInvalid => e
-        puts "Erro ao criar estudante #{row['name']}: #{e.message}"
+        rescue ActiveRecord::RecordNotFound
+          puts "Curso com ID #{row['course_id']} não encontrado. Estudante #{row['name']} não criado."
+        rescue ActiveRecord::RecordInvalid => e
+          puts "Erro ao criar estudante #{row['name']}: #{e.message}"
       end
 
     end

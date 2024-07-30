@@ -7,14 +7,14 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Course Name</th>
-          <th>Course Code </th>
+          <th>Course</th>
+          <th>Entity</th>
         </tr>
       </thead>
       <tbody>
         <tr>
            <td><%= @course.course_name%></td>
-           <td><%= @course.course_code %></td>
+           <td><%= @course.entity.name%></td>
         </tr>
       </tbody>
     </table>

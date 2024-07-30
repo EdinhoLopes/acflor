@@ -1,42 +1,40 @@
-<%= form_with(model: entity) do |form| %>
+
+<%= simple_form_for entity do |form| %>
+
   <% if entity.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
       <ul>
-        <% entity.errors.each do |error| %>
+        <% course.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <p>
+    <%= form.input :name %>
+  </p>
 
-  <div>
-    <%= form.label :responsible, style: "display: block" %>
-    <%= form.text_field :responsible %>
-  </div>
+  <p>
+    <%= form.input :responsible%>
+  </p>
 
-  <div>
-    <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
-  </div>
+  <p>
+    <%= form.input :address %>
+  </p>
 
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
+  <p>
+    <%= form.input :phone %>
+  </p>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
+  <p>
+    <%= form.input :email %>
+  </p>
 
-  <div>
-    <%= form.submit %>
-  </div>
+  <p>
+    <%= form.button :submit, class: 'btn btn-success' %>
+    <%= link_to "Back", entities_path, class: 'btn btn-primary' %>
+  </p>
 <% end %>

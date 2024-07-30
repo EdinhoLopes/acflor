@@ -9,6 +9,5 @@ class CreateEntities < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-    add_index :entities, :email, unique: true
   end
 end

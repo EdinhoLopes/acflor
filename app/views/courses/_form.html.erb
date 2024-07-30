@@ -1,4 +1,4 @@
-<%= form_with(model: course) do |form| %>
+<%= simple_form_for course do |form| %>
   <% if course.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
@@ -11,17 +11,16 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :course_name, style: "display: block" %>
-    <%= form.text_field :course_name %>
-  </div>
+  <p>
+    <%= form.input :course_name %>
+  </p>
 
-  <div>
-    <%= form.label :course_code, style: "display: block" %>
-    <%= form.text_field :course_code %>
-  </div>
+  <p>
+    <%= form.input :entity_id, collection: @entities, label_method: :name, value_method: :id, prompt: 'Choose of entity' %>
+  </p>
 
-  <div>
-    <%= form.submit %>
-  </div>
+  <p>
+    <%= form.button :submit, class: 'btn btn-success' %>
+    <%= link_to "Back", courses_path, class: 'btn btn-primary' %>
+  </p>
 <% end %>

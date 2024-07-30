@@ -3,11 +3,11 @@
 one:
   student: one
   course: one
-  date: 2024-07-24
+  date: 2024-07-30
   present: false
 
 two:
   student: two
   course: two
-  date: 2024-07-24
+  date: 2024-07-30
   present: false

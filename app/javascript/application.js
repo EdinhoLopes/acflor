@@ -6,4 +6,4 @@ import "jquery/jquery"
 import "bootstrap/js/bootstrap.bundle"
 import "jquery-easing/jquery.easing"
 import "sb-admin-2"
-
+import "students"
