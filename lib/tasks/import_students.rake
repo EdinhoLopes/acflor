@@ -8,6 +8,7 @@ namespace :import do
       begin
 
         course = Course.find(row['course_id'])
+        entity = Entity.find(row['entity_id'])
 
         Student.create!(
           name: row['name'],
@@ -15,12 +16,13 @@ namespace :import do
           address: row['address'],
           phone: row['phone'],
           email: row['email'],
-          registration_number: row['registration_number'],
+          entity: entity,
           course: course
         )
 
         rescue ActiveRecord::RecordNotFound
           puts "Curso com ID #{row['course_id']} não encontrado. Estudante #{row['name']} não criado."
+          puts "Entidade com ID #{row['entity_id']} não encontrado. Estudante #{row['name']} não criado."
         rescue ActiveRecord::RecordInvalid => e
           puts "Erro ao criar estudante #{row['name']}: #{e.message}"
       end
