@@ -4,15 +4,7 @@ class CoursesController < ApplicationController
 
   # GET /courses or /courses.json
   def index
-    if params[:entity_id]
-      @courses = Course.where(entity_id: params[:entity_id])
-    else
       @courses = Course.all
-    end
-
-    respond_to do |format|
-      format.json { render json: @courses }
-    end
   end
 
   # GET /courses/1 or /courses/1.json

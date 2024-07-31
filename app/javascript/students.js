@@ -1,26 +1,32 @@
-$(document).ready(function() {
-  const entitySelect = $("#entity_select");
-  const courseSelect = $("#course_select");
+document.addEventListener("DOMContentLoaded", function() {
+  const entitySelect = document.getElementById("entity_select");
+  const courseSelect = document.getElementById("course_select");
 
-  entitySelect.on("change", function() {
-    const entityId = $(this).val();
+  entitySelect.addEventListener("change", function() {
+    const entityId = this.value;
 
-    $.ajax({
-      url: `/courses.json?entity_id=${entityId}`,
-      method: 'GET',
-      success: function(data) {
+    fetch(`/courses.json?entity_id=${entityId}`)
+      .then(response => response.json())
+      .then(data => {
         // Clear current options
-        courseSelect.empty();
+        while (courseSelect.options.length > 0) {
+          courseSelect.remove(0);
+        }
 
         // Add prompt option
-        courseSelect.append('<option value="">Selecione um curso</option>');
+        const promptOption = document.createElement("option");
+        promptOption.text = "Selecione um curso";
+        promptOption.value = "";
+        courseSelect.add(promptOption);
 
         // Add new options
         data.forEach(course => {
-          const option = `<option value="${course.id}">${course.course_name}</option>`;
-          courseSelect.append(option);
+          const option = document.createElement("option");
+          option.text = course.course_name;
+          option.value = course.id;
+          courseSelect.add(option);
         });
-      }
-    });
+      })
+      .catch(error => console.error('Error fetching courses:', error));
   });
 });

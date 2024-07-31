@@ -21,10 +21,6 @@ class StudentsController < ApplicationController
   def edit
   end
 
-  def set_courses
-    @courses = Course.all
-  end
-
   # POST /students or /students.json
   def create
     @student = Student.new(student_params)
@@ -67,17 +63,27 @@ class StudentsController < ApplicationController
     @students = Student.page(params[:page]).per(10)
   end
 
+  def get_courses
+    @courses = Course.all
+    @courses = @courses.entity(params[:entity_id]) if (params[:entity_id])
+
+    render json: @courses
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
       @student = Student.find(params[:id])
     end
 
+    def set_courses
+      @courses = Course.all
+      @courses = @courses.entity(params[:entity_id]) if (params[:entity_id])
+    end
 
-  def set_entities
-    @entities = Entity.all
-    @courses = Course.none # Inicialmente vazio
-  end
+    def set_entities
+      @entities = Entity.all
+    end
 
     # Only allow a list of trusted parameters through.
     def student_params
