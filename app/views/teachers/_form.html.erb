@@ -1,0 +1,67 @@
+<%= simple_form_for teacher do |form| %>
+  <% if teacher.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
+
+      <ul>
+        <% teacher.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.input :name %>
+  </p>
+  <p>
+    <%= form.input :date_of_birth %>
+  </p>
+
+  <p>
+    <%= form.input :address %>
+  </p>
+
+  <p>
+    <%= form.input :phone %>
+  </p>
+
+  <p>
+    <%= form.input :email %>
+  </p>
+  <p>
+    <%= form.input :rg %>
+  </p>
+  <p>
+    <%= form.input :cpf %>
+  </p>
+
+  <p>
+    <%= form.input :pis %>
+  </p>
+
+   <p>
+    <%= form.input :cnpj %>
+  </p>
+
+  <p>
+    <%= form.input :profession %>
+  </p>
+
+  <p>
+    <%= form.input :teaching_experience %>
+  </p>
+
+  <p>
+    <%= form.input :professional_experience %>
+  </p>
+
+  <p>
+    <%= form.input :area_of_specialization %>
+  </p>
+  <p>
+    <%= form.button :submit, class: 'btn btn-success' %>
+    <%= link_to "Back", teachers_path, class: 'btn btn-primary' %>
+  </p>
+<% end %>
+

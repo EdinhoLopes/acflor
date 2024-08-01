@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_day: 2024-07-31
+  presence: false
+  teacher_course: one
+  student_course: one
+
+two:
+  date_of_day: 2024-07-31
+  presence: false
+  teacher_course: two
+  student_course: two

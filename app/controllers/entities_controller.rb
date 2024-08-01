@@ -6,9 +6,12 @@ class EntitiesController < ApplicationController
     @entities = Entity.all
   end
 
+  def index
+    @entities = Entity.page(params[:page]).per(10)
+  end
+
   # GET /entities/1 or /entities/1.json
   def show
-    @courses = @entity.courses
   end
 
   # GET /entities/new
@@ -56,10 +59,6 @@ class EntitiesController < ApplicationController
       format.html { redirect_to entities_url, notice: "Entity was successfully destroyed." }
       format.json { head :no_content }
     end
-  end
-
-  def index
-    @entities = Entity.page(params[:page]).per(10)
   end
 
   private

@@ -1,3 +1,4 @@
+
 <%= simple_form_for course do |form| %>
   <% if course.errors.any? %>
     <div style="color: red">
@@ -12,11 +13,7 @@
   <% end %>
 
   <p>
-    <%= form.input :course_name %>
-  </p>
-
-  <p>
-    <%= form.input :entity_id, collection: @entities, label_method: :name, value_method: :id, prompt: 'Choose of entity' %>
+    <%= form.input :name %>
   </p>
 
   <p>

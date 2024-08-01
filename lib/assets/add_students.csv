@@ -1,39 +1,39 @@
-name,date_of_birth,address,phone,email,entity_id,course_id
-Beltrano de Souza,15/01/2000,Rua das Flores 123 Bairro Centro,98877665544,beltrano@acflor.com,1,2
-Ciclano Alves,05/08/1995,Avenida Principal 123 Bairro Nova Esperança,98765432100,ciclano@acflor.com,2,3
-Maria das Dores,11/12/1990,Rua da Alegria 456 Bairro Esperança,98654782134,maria@acflor.com,3,4
-João de Barros,22/06/1985,Rua do Sol 789 Bairro Sol Nascente,98563217455,joao@acflor.com,4,5
-Ana Paula Santos,30/03/1998,Rua das Orquídeas 321 Bairro Jardim das Flores,98456743210,ana@acflor.com,5,6
-Pedro Henrique Lima,14/07/1992,Avenida das Palmeiras 876 Bairro Verde,98321234567,pedro@acflor.com,6,7
-Julia Mendes,02/11/1999,Rua das Acácias 654 Bairro Floresta,98234567890,julia@acflor.com,7,8
-Fernando Silva,19/05/1997,Rua das Rosas 231 Bairro Jardim Botânico,98123456789,fernando@acflor.com,8,9
-Carolina Pereira,23/09/1991,Avenida Atlântica 112 Bairro Litoral,98012345678,carolina@acflor.com,9,10
-Carlos Alberto,16/04/1988,Rua da Praia 789 Bairro Mar Azul,97987654321,carlos@acflor.com,10,11
-Mariana Costa,27/02/1993,Rua do Lago 432 Bairro Campo Belo,97876543210,mariana@acflor.com,11,12
-Lucas Andrade,01/06/2001,Rua das Águas 987 Bairro Aquático,97765432109,lucas@acflor.com,12,13
-Gabriela Souza,10/10/1994,Rua das Palmeiras 123 Bairro Verde,97654321098,gabriela@acflor.com,13,14
-Ricardo Oliveira,15/11/1986,Avenida Central 456 Bairro Centro,97543210987,ricardo@acflor.com,14,15
-Isabela Rocha,29/08/1990,Rua da Liberdade 789 Bairro Independência,97432109876,isabela@acflor.com,15,16
-Thiago Martins,22/03/1996,Rua dos Pioneiros 123 Bairro Antigo,97321098765,thiago@acflor.com,16,17
-Larissa Campos,05/12/1997,Rua dos Girassóis 456 Bairro Jardim Alegre,97210987654,larissa@acflor.com,1,18
-Rafael Mendes,18/07/1993,Rua do Comércio 789 Bairro Comercial,97109876543,rafael@acflor.com,2,19
-Beatriz Fernandes,21/04/1989,Rua das Flores 321 Bairro Jardim,97098765432,beatriz@acflor.com,3,20
-André Nascimento,10/05/1995,Rua da Colina 654 Bairro Alto,96987654321,andre@acflor.com,4,21
-Laura Almeida,07/09/1998,Rua das Palmeiras 987 Bairro Verde,96876543210,laura@acflor.com,5,22
-Marcelo Ferreira,18/06/1992,Rua dos Ipês 123 Bairro Jardim Botânico,96765432109,marcelo@acflor.com,6,23
-Bruna Ribeiro,25/08/2000,Rua das Hortênsias 456 Bairro Jardim das Flores,96654321098,bruna@acflor.com,7,22
-Vinicius Barbosa,13/01/1987,Rua das Azaleias 789 Bairro Flor do Campo,96543210987,vinicius@acflor.com,8,21
-Renata Lima,22/11/1991,Rua das Palmeiras 321 Bairro Verde,96432109876,renata@acflor.com,9,16
-Felipe Costa,03/12/1994,Rua das Magnólias 654 Bairro Jardim das Flores,96321098765,felipe@acflor.com,10,17
-Alice Santos,09/04/1996,Rua das Oliveiras 987 Bairro Jardim Botânico,96210987654,alice@acflor.com,11,18
-Diego Oliveira,15/05/1990,Rua das Palmeiras 123 Bairro Verde,96109876543,diego@acflor.com,12,19
-Amanda Martins,04/03/1992,Rua das Camélias 456 Bairro Jardim das Flores,96098765432,amanda@acflor.com,13,10
-Rodrigo Pereira,20/07/1998,Rua das Palmeiras 789 Bairro Verde,95987654321,rodrigo@acflor.com,14,11
-Sophia Lopes,29/08/1985,Rua das Tulipas 321 Bairro Jardim das Flores,95876543210,sophia@acflor.com,15,22
-Eduardo Campos,11/10/1993,Rua das Margaridas 654 Bairro Jardim das Flores,95765432109,eduardo@acflor.com,16,16
-Larissa Santos,14/02/1997,Rua das Begônias 987 Bairro Jardim Botânico,95654321098,larissa.santos@acflor.com,1,14
-Lucas Silva,30/09/2002,Rua das Palmeiras 123 Bairro Verde,95543210987,lucas.silva@acflor.com,2,22
-Gabriel Souza,25/12/2001,Rua das Palmeiras 789 Bairro Verde,95321098765,gabriel@acflor.com,3,29
-Juliana Mendes,18/03/1995,Rua das Orquídeas 123 Bairro Jardim das Flores,95210987654,juliana@acflor.com,4,18
-Cecília Lima,21/01/1990,Rua das Rosas 456 Bairro Jardim das Flores,95098765432,cecilia@acflor.com,5,22
-Assucleide Lima,21/01/1994,Rua das Rosas 456 Bairro Jardim das Flores,95066765432,assucleid@acflor.com,5,22
+name,cpf,date_of_birth,address,phone,email
+Beltrano de Souza,63438569515,15/01/2000,Rua das Flores 123 Bairro Centro,98877665544,beltrano@acflor.com
+Ciclano Alves,26382622931,05/08/1995,Avenida Principal 123 Bairro Nova Esperança,98765432100,ciclano@acflor.com
+Maria das Dores,71555057659,11/12/1990,Rua da Alegria 456 Bairro Esperança,98654782134,maria@acflor.com
+João de Barros,31038408610,22/06/1985,Rua do Sol 789 Bairro Sol Nascente,98563217455,joao@acflor.com
+Ana Paula Santos,14272519670,30/03/1998,Rua das Orquídeas 321 Bairro Jardim das Flores,98456743210,ana@acflor.com
+Pedro Henrique Lima,74578862739,14/07/1992,Avenida das Palmeiras 876 Bairro Verde,98321234567,pedro@acflor.com
+Julia Mendes,12594299707,02/11/1999,Rua das Acácias 654 Bairro Floresta,98234567890,julia@acflor.com
+Fernando Silva,98603101574,19/05/1997,Rua das Rosas 231 Bairro Jardim Botânico,98123456789,fernando@acflor.com
+Carolina Pereira,08865580771,23/09/1991,Avenida Atlântica 112 Bairro Litoral,98012345678,carolina@acflor.com
+Carlos Alberto,96853501241,16/04/1988,Rua da Praia 789 Bairro Mar Azul,97987654321,carlos@acflor.com
+Mariana Costa,91441213422,27/02/1993,Rua do Lago 432 Bairro Campo Belo,97876543210,mariana@acflor.com
+Lucas Andrade,41691876100,01/06/2001,Rua das Águas 987 Bairro Aquático,97765432109,lucas@acflor.com
+Gabriela Souza,58962884178,10/10/1994,Rua das Palmeiras 123 Bairro Verde,97654321098,gabriela@acflor.com
+Ricardo Oliveira,55992024530,15/11/1986,Avenida Central 456 Bairro Centro,97543210987,ricardo@acflor.com
+Isabela Rocha,78218905022,29/08/1990,Rua da Liberdade 789 Bairro Independência,97432109876,isabela@acflor.com
+Thiago Martins,86068090124,22/03/1996,Rua dos Pioneiros 123 Bairro Antigo,97321098765,thiago@acflor.com
+Larissa Campos,07367606280,05/12/1997,Rua dos Girassóis 456 Bairro Jardim Alegre,97210987654,larissa@acflor.com
+Rafael Mendes,36415452347,18/07/1993,Rua do Comércio 789 Bairro Comercial,97109876543,rafael@acflor.com
+Beatriz Fernandes,71889517305,21/04/1989,Rua das Flores 321 Bairro Jardim,97098765432,beatriz@acflor.com
+André Nascimento,24360267851,10/05/1995,Rua da Colina 654 Bairro Alto,96987654321,andre@acflor.com
+Laura Almeida,73413964151,07/09/1998,Rua das Palmeiras 987 Bairro Verde,96876543210,laura@acflor.com
+Marcelo Ferreira,36801679899,18/06/1992,Rua dos Ipês 123 Bairro Jardim Botânico,96765432109,marcelo@acflor.com
+Bruna Ribeiro,71767498098,25/08/2000,Rua das Hortênsias 456 Bairro Jardim das Flores,96654321098,bruna@acflor.com
+Vinicius Barbosa,07021784708,13/01/1987,Rua das Azaleias 789 Bairro Flor do Campo,96543210987,vinicius@acflor.com
+Renata Lima,41105290182,22/11/1991,Rua das Palmeiras 321 Bairro Verde,96432109876,renata@acflor.com
+Felipe Costa,78643501433,03/12/1994,Rua das Magnólias 654 Bairro Jardim das Flores,96321098765,felipe@acflor.com
+Alice Santos,34701168149,09/04/1996,Rua das Oliveiras 987 Bairro Jardim Botânico,96210987654,alice@acflor.com
+Diego Oliveira,46245289050,15/05/1990,Rua das Palmeiras 123 Bairro Verde,96109876543,diego@acflor.com
+Amanda Martins,92323208004,04/03/1992,Rua das Camélias 456 Bairro Jardim das Flores,96098765432,amanda@acflor.com
+Rodrigo Pereira,41836695535,20/07/1998,Rua das Palmeiras 789 Bairro Verde,95987654321,rodrigo@acflor.com
+Sophia Lopes,87936121765,29/08/1985,Rua das Tulipas 321 Bairro Jardim das Flores,95876543210,sophia@acflor.com
+Eduardo Campos,26183284777,11/10/1993,Rua das Margaridas 654 Bairro Jardim das Flores,95765432109,eduardo@acflor.com
+Larissa Santos,38245453579,14/02/1997,Rua das Begônias 987 Bairro Jardim Botânico,95654321098,larissa.santos@acflor.com
+Lucas Silva,42285457693,30/09/2002,Rua das Palmeiras 123 Bairro Verde,95543210987,lucas.silva@acflor.com
+Gabriel Souza,97235501995,25/12/2001,Rua das Palmeiras 789 Bairro Verde,95321098765,gabriel@acflor.com
+Juliana Mendes,51798089289,18/03/1995,Rua das Orquídeas 123 Bairro Jardim das Flores,95210987654,juliana@acflor.com
+Cecília Lima,20218880707,21/01/1990,Rua das Rosas 456 Bairro Jardim das Flores,95098765432,cecilia@acflor.com
+Assucleide Lima,75716219500,21/01/1994,Rua das Rosas 456 Bairro Jardim das Flores,95066765432,assucleid@acflor.com

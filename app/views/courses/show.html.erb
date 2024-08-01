@@ -8,19 +8,17 @@
       <thead>
         <tr>
           <th>Course</th>
-          <th>Entity</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-           <td><%= @course.course_name%></td>
-           <td><%= @course.entity.name%></td>
+           <td><%= @course.name%></td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="card-footer">
-      <%= link_to 'Back', courses_path, class: 'btn btn-primary' %>
-      <%= link_to 'Edit', edit_course_path(@course), class: 'btn btn-success' %>
+    <%= link_to 'Edit', edit_course_path(@course), class: 'btn btn-success' %>
+    <%= link_to 'Back', courses_path, class: 'btn btn-primary' %>
   </div>
 </div>

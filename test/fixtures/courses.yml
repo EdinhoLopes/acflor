@@ -1,9 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  course_name: MyString
-  entity: one
+  name: MyString
 
 two:
-  course_name: MyString
-  entity: two
+  name: MyString
