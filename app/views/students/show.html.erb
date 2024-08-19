@@ -7,28 +7,30 @@
         <table class="table">
         <thead>
             <tr>
-            <th>Name</th>
-            <th>CPF</th>
+            <th>Name protocolo</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Adrress</th>
             <th>Date of Birth</th>
+            <th>Course</th>
+            <th>Entity</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><%= @student.name%></td>
-                <td><%= @student.cpf%></td>
                 <td><%= @student.email %></td>
                 <td><%= @student.phone %></td>
                 <td><%= @student.address %></td>
                 <td><%= @student.date_of_birth %></td>
+                <td><%= @student.course.course_name %></td>
+                <td> <%= @student.entity.name%> </td>
             </tr>
         </tbody>
         </table>
     </div>
     <div class="card-footer">
-      <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-success' %>
-      <%= link_to 'Back', students_path, class: 'btn btn-primary' %>
+        <%= link_to 'Back', students_path, class: 'btn btn-primary' %>
+        <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-success' %>
     </div>
 </div>

@@ -1,13 +1,10 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: %i[ show edit update destroy ]
+  before_action :set_entities, only: %i[new edit]
 
   # GET /courses or /courses.json
   def index
-    @courses = Course.all
-  end
-
-  def index
-    @courses = Course.page(params[:page]).per(10)
+      @courses = Course.all
   end
 
   # GET /courses/1 or /courses/1.json
@@ -61,14 +58,22 @@ class CoursesController < ApplicationController
     end
   end
 
+  def index
+    @courses = Course.page(params[:page]).per(10)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
       @course = Course.find(params[:id])
     end
 
+    def set_entities
+      @entities = Entity.all
+    end
+
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:name)
+      params.require(:course).permit(:course_name, :entity_id)
     end
 end

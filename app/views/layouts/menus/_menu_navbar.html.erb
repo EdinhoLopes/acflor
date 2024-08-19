@@ -76,36 +76,19 @@
     </div>
 </li>
 
-<!-- Menu of Teachers -->
+<!-- Menu of Attendances -->
 
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFor"
         aria-expanded="true" aria-controls="collapseFor">
         <i class="fas fa-sticky-note"></i>
-        <span>Teachers</span>
+        <span>Attendances</span>
     </a>
     <div id="collapseFor" class="collapse" aria-labelledby="headingUtilities"
         data-parent="#accordionSidebar">
         <div class="bg-orange py-2 collapse-inner rounded">
-            <%= link_to 'Teachers List', teachers_path, class:"collapse-item", style: "color: white;" %>
-            <%= link_to 'New Teachers', new_teacher_path, class:"collapse-item", style: "color: white;" %> 
-        </div>
-    </div>
-</li>
-
-<!-- Menu of Presences -->
-
-<li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive"
-        aria-expanded="true" aria-controls="collapseFor">
-        <i class="fas fa-sticky-note"></i>
-        <span>Presences</span>
-    </a>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingUtilities"
-        data-parent="#accordionSidebar">
-        <div class="bg-orange py-2 collapse-inner rounded">
-            <%= link_to 'Presences List', presences_path, class:"collapse-item", style: "color: white;" %>
-            <%= link_to 'New Presences', new_presence_path, class:"collapse-item", style: "color: white;" %> 
+            <%= link_to 'Attendances List', attendances_path, class:"collapse-item", style: "color: white;" %>
+            <%= link_to 'New Attendances', new_attendance_path, class:"collapse-item", style: "color: white;" %> 
         </div>
     </div>
 </li>

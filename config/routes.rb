@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  resources :presences
-  resources :teacher_courses
-  resources :course_entities
-  resources :student_courses
-  resources :teachers
-  resources :entities
+  resources :attendances
+  # resources :students
+  resources :students do
+    collection do
+      get 'get_courses/:entity_id', to: 'students#get_courses'
+    end
+  end
   resources :courses
-  resources :students
+  resources :entities
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

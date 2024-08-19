@@ -16,15 +16,12 @@
   </p>
 
   <p>
-    <%= form.input :cpf %>
-  </p>
-
-  <p>
-    <%= form.input :date_of_birth, as: :date, html5: true %>
+    <%= form.input :date_of_birth, as: :date%>
   </p>
 
   <p>
     <%= form.input :address %>
+
   </p>
 
   <p>
@@ -33,6 +30,15 @@
 
   <p>
     <%= form.input :email %>
+  </p>
+
+
+  <p>
+    <%= form.input :entity_id, collection: @entities, label_method: :name, value_method: :id, prompt: 'Choose an entity', input_html: { id: 'entity_select' } %>
+  </p>
+
+  <p>
+    <%= form.input :course_id, collection: @courses, label_method: :course_name, value_method: :id, prompt: 'Choose a course', input_html: { id: 'course_select' } %>
   </p>
 
   <p>

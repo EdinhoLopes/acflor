@@ -10,20 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_31_195507) do
-  create_table "course_entities", force: :cascade do |t|
-    t.integer "entity_id", null: false
+ActiveRecord::Schema[7.0].define(version: 2024_07_30_124420) do
+  create_table "attendances", force: :cascade do |t|
+    t.integer "student_id", null: false
     t.integer "course_id", null: false
+    t.date "date"
+    t.boolean "present"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_course_entities_on_course_id"
-    t.index ["entity_id"], name: "index_course_entities_on_entity_id"
+    t.index ["course_id"], name: "index_attendances_on_course_id"
+    t.index ["student_id"], name: "index_attendances_on_student_id"
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "name"
+    t.string "course_name"
+    t.integer "entity_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["entity_id"], name: "index_courses_on_entity_id"
   end
 
   create_table "entities", force: :cascade do |t|
@@ -36,70 +40,23 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_31_195507) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "presences", force: :cascade do |t|
-    t.date "date_of_day"
-    t.boolean "presence"
-    t.integer "teacher_course_id", null: false
-    t.integer "student_course_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["student_course_id"], name: "index_presences_on_student_course_id"
-    t.index ["teacher_course_id"], name: "index_presences_on_teacher_course_id"
-  end
-
-  create_table "student_courses", force: :cascade do |t|
-    t.integer "student_id", null: false
-    t.integer "course_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_student_courses_on_course_id"
-    t.index ["student_id"], name: "index_student_courses_on_student_id"
-  end
-
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.string "cpf"
     t.date "date_of_birth"
     t.string "address"
     t.string "phone"
     t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "teacher_courses", force: :cascade do |t|
-    t.integer "teacher_id", null: false
+    t.integer "entity_id", null: false
     t.integer "course_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_teacher_courses_on_course_id"
-    t.index ["teacher_id"], name: "index_teacher_courses_on_teacher_id"
+    t.index ["course_id"], name: "index_students_on_course_id"
+    t.index ["entity_id"], name: "index_students_on_entity_id"
   end
 
-  create_table "teachers", force: :cascade do |t|
-    t.string "name"
-    t.string "date_of_birth"
-    t.string "address"
-    t.string "phone"
-    t.string "email"
-    t.string "rg"
-    t.string "cpf"
-    t.string "pis"
-    t.string "cnpj"
-    t.string "profession"
-    t.string "teaching_experience"
-    t.string "professional_experience"
-    t.string "area_of_specialization"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "course_entities", "courses"
-  add_foreign_key "course_entities", "entities"
-  add_foreign_key "presences", "student_courses"
-  add_foreign_key "presences", "teacher_courses"
-  add_foreign_key "student_courses", "courses"
-  add_foreign_key "student_courses", "students"
-  add_foreign_key "teacher_courses", "courses"
-  add_foreign_key "teacher_courses", "teachers"
+  add_foreign_key "attendances", "courses"
+  add_foreign_key "attendances", "students"
+  add_foreign_key "courses", "entities"
+  add_foreign_key "students", "courses"
+  add_foreign_key "students", "entities"
 end

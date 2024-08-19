@@ -1,6 +1,7 @@
 <div id="<%= dom_id course %>">
   <tr>
-    <td> <%= course.name %> </td>
+    <td> <%= course.course_name %> </td>
+    <td> <%= course.entity.name %> </td>
 
     <td> 
       <%= link_to course_path(course) do %>

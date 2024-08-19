@@ -15,9 +15,10 @@ class StudentsTest < ApplicationSystemTestCase
     click_on "New student"
 
     fill_in "Address", with: @student.address
-    fill_in "Cpf", with: @student.cpf
+    fill_in "Course", with: @student.course_id
     fill_in "Date of birth", with: @student.date_of_birth
     fill_in "Email", with: @student.email
+    fill_in "Entity", with: @student.entity_id
     fill_in "Name", with: @student.name
     fill_in "Phone", with: @student.phone
     click_on "Create Student"
@@ -31,9 +32,10 @@ class StudentsTest < ApplicationSystemTestCase
     click_on "Edit this student", match: :first
 
     fill_in "Address", with: @student.address
-    fill_in "Cpf", with: @student.cpf
+    fill_in "Course", with: @student.course_id
     fill_in "Date of birth", with: @student.date_of_birth
     fill_in "Email", with: @student.email
+    fill_in "Entity", with: @student.entity_id
     fill_in "Name", with: @student.name
     fill_in "Phone", with: @student.phone
     click_on "Update Student"

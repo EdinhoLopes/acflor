@@ -1,13 +1,11 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: %i[ show edit update destroy ]
+  before_action :set_courses, only: %i[new edit create update]
+  before_action :set_entities, only: %i[new edit]
 
   # GET /students or /students.json
   def index
     @students = Student.all
-  end
-
-  def index
-    @students = Student.page(params[:page]).per(10)
   end
 
   # GET /students/1 or /students/1.json
@@ -61,6 +59,10 @@ class StudentsController < ApplicationController
     end
   end
 
+  def index
+    @students = Student.page(params[:page]).per(10)
+  end
+
   def get_courses
     @courses = Course.all
     @courses = @courses.entity(params[:entity_id]) if (params[:entity_id])
@@ -74,8 +76,17 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:id])
     end
 
+    def set_courses
+      @courses = Course.all
+      @courses = @courses.entity(params[:entity_id]) if (params[:entity_id])
+    end
+
+    def set_entities
+      @entities = Entity.all
+    end
+
     # Only allow a list of trusted parameters through.
     def student_params
-      params.require(:student).permit(:name, :cpf, :date_of_birth, :address, :phone, :email)
+      params.require(:student).permit(:name, :date_of_birth, :address, :phone, :email, :entity_id, :course_id)
     end
 end
